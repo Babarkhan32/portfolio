@@ -1,3 +1,3 @@
 export const ErrorPage = () => {
-  return <h2>"OOPS! Something went wrong"</h2>;
+  return <h2>"OOPS! Page crashed"</h2>;
 };

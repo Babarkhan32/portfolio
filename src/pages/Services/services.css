@@ -1,0 +1,28 @@
+.title-span {
+    display: inline-block;
+    background-color: rgba(0,0,0,.04);
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-weight: 600;
+    font-size: 22px;
+    color: #333;
+    font-family: Montserrat;
+    letter-spacing: 0;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+.heading {
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-weight: 600;
+    font-size: 32px;
+    color: #333;
+    font-family: Montserrat;
+    letter-spacing: 0;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    
+}
+.mrg-top {
+    margin-top:5%
+}

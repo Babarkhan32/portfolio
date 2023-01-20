@@ -13,7 +13,7 @@ it("Loading_render", async () => {
   const heading = screen.getByText("Loading.....");
   expect(heading).toBeInTheDocument();
 });
-import * from '../../store/actions/Home/'
+
 it('Post_render', async () => {
     jest.mock("../");
 

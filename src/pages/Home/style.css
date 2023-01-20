@@ -1,0 +1,122 @@
+.name-style{
+    font-size: 37px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+}
+
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    position: relative;
+    color: black;
+    font-weight: bold;
+    font-family: "Anonymous Pro", monospace;
+    letter-spacing: 1px;
+    overflow: hidden;
+    font-size: 22px;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    animation: typewriter 4s steps(20) 1s 1 normal both,
+      blinkTextCursor 500ms infinite;
+  }
+  
+
+  
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 320px;
+    }
+  }
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: hsl(0, 0%, 30%);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+  .animate-text {
+    animation-name: change-color, grow-shrink, expand;
+    animation-duration: 8s, 5s, 5s;
+    animation-iteration-count: 2;
+    font-size: 37px;
+    font-weight: 800;
+    font-family: Anonymous Pro, monospace;
+    
+   
+  }
+
+  .button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  border-radius:20%;
+}
+
+.button:hover {
+    background-color: #555555;
+    color: white;
+}
+.button:hover {
+    background-color: #555555;
+    color: white;
+}
+h1.kreep {
+  display: inline-block;
+  /*name-duration-function(ease,eas-in,linear)-delay-count-direction */
+  animation: kreep 0.7s ease 2s infinite alternate;
+}
+
+h1.kreep:hover {
+  animation: none;
+}
+
+  
+  @keyframes change-color {
+    25% { color: #5f696a; }
+    50% { color: #181616; }
+    75% { color: #d3e8e5; }
+  }
+  
+  @keyframes grow-shrink {
+    50% { transform: scale(0.5); }
+  }
+  
+  @keyframes expand {
+    50% { word-spacing: 10px; }
+  }
+
+
+ 
+
+/*Bounce*/
+@keyframes kreep {
+    0% {-webkit-transform: scale(1.1,.9);
+        transform: scale(1.1,.9);}
+   50% { -webkit-transform: scale(.9,1.1) translateY(-.5rem)}
+   70% { -webkit-transform: scale(1);
+         transform: scale(1);}
+}
+
+
+
+
