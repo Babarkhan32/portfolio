@@ -43,7 +43,7 @@ const Services = () => {
       {constants.secondaryServices.map((service) => {
         return (
           <>
-            <Grid className="center-content" item xs={winSize > 900 ? 3 : 12}>
+            <Grid className="center-content" item xs={winSize > 1200 ? 3 : 12}>
               <Card
                 title={service.title}
                 description={service.description}
