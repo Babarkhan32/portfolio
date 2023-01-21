@@ -22,16 +22,19 @@ const Contact = () => {
           username: "+923339402825",
           message: "send me a message...",
           image: whatsapp,
+          src: "https://api.whatsapp.com/send?phone=923339402825"
         },
         {
           username: "babar-khan-b809a5193",
           message: "Add me to your connections..",
           image: linkedIn,
+          src: "https://www.linkedin.com/in/babar-khan-b809a5193/",
         },
         {
           username: "babarkhan32",
           message: "Follow me up...",
           image: github,
+          src: "https://github.com/Babarkhan32",
         },
       ].map((contact) => {
         return (
@@ -42,6 +45,7 @@ const Contact = () => {
                 message={contact.message}
                 socialCard={true}
                 image={contact.image}
+                src={contact.src}
               ></Card>
             </Grid>
           </>

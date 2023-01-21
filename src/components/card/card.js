@@ -9,10 +9,12 @@ const Card = ({
   image,
   username,
   message,
+  src,
 }) => {
   const readMoreref = useRef();
   const { width: winSize } = useWindowSize();
   const isBigScreen = winSize > 1650;
+
   console.log(isBigScreen, winSize);
   if (!socialCard) {
     return (
@@ -42,7 +44,12 @@ const Card = ({
           </div>
           <div class="flip-card-back">
             <h1>Babar Khan</h1>
-            <p>{username}</p>
+            <a
+             
+              href={src}
+            >
+              {username}
+            </a>
             <p>{message}</p>
           </div>
         </div>

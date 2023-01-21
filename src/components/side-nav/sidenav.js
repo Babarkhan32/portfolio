@@ -5,17 +5,18 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import { Link } from "react-router-dom";
-
+import AddHomeIcon from "@mui/icons-material/AddHome";
+import InfoIcon from "@mui/icons-material/Info";
+import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
+import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
@@ -31,20 +32,24 @@ function ResponsiveDrawer(props) {
       <Toolbar />
 
       <List style={{ marginTop: "80%" }}>
-        {["Home", "About", "Services", "Contact", "Drafts"].map(
-          (text, index) => (
-            <Link to={`/${text}`} style={{ color: "black" }}>
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            </Link>
-          )
-        )}
+        {[
+          { text: "Home", icon: <AddHomeIcon /> },
+          { text: "About", icon: <InfoIcon /> },
+          { text: "Services", icon: <MiscellaneousServicesIcon /> },
+          { text: "Contact", icon: <ContactPhoneIcon /> },
+        ].map((menu, index) => (
+          <Link
+            to={`/${menu.text}`}
+            style={{ color: "black", textDecoration: "none" }}
+          >
+            <ListItem className="about-intro" key={menu.text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>{menu.icon}</ListItemIcon>
+                <ListItemText primary={menu.text} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+        ))}
       </List>
     </div>
   );
