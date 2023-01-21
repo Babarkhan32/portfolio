@@ -10,6 +10,7 @@ import { NotFound } from "../pages/Not-Found";
 import { ErrorPage } from "../pages/Error-Page";
 import About from "../pages/About/about";
 import Services from "../pages/Services/services";
+import Contact from '../pages/Contact/contact'
 
 export default createBrowserRouter(
   createRoutesFromElements([
@@ -50,5 +51,14 @@ export default createBrowserRouter(
         </SideNav>
       }
     />,
+    <Route
+      path="/Contact"
+      errorElement={<ErrorPage />}
+      element={
+        <SideNav>
+         <Contact/>
+        </SideNav>
+      }
+    />
   ])
 );

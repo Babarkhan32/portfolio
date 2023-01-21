@@ -14,14 +14,12 @@ import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
   const { window, children } = props;
-  const location = useLocation();
-  const isServicePage = location.pathname === "/Services";
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -33,18 +31,20 @@ function ResponsiveDrawer(props) {
       <Toolbar />
 
       <List style={{ marginTop: "80%" }}>
-        {["Home","About", "Services", "Send email", "Drafts"].map((text, index) => (
-          <Link to={`/${text}`} style={{ color: "black" }}>
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          </Link>
-        ))}
+        {["Home", "About", "Services", "Contact", "Drafts"].map(
+          (text, index) => (
+            <Link to={`/${text}`} style={{ color: "black" }}>
+              <ListItem key={text} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+          )
+        )}
       </List>
     </div>
   );
@@ -120,7 +120,7 @@ function ResponsiveDrawer(props) {
           </Drawer>
         </Box>
         <Box
-          style={{ backgroundColor: !isServicePage ? "#f8f8f8" : "#fff" }}
+          style={{ backgroundColor: "#f8f8f8" }}
           component="main"
           sx={{
             flexGrow: 1,

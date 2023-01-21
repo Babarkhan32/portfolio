@@ -7,17 +7,19 @@
 }
 
 
+
 .center-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
+
 
 h2 {
     position: relative;
     color: black;
     font-weight: bold;
-    font-family: "Anonymous Pro", monospace;
+    font-family: Anonymous Pro, monospace;
     letter-spacing: 1px;
     overflow: hidden;
     font-size: 22px;

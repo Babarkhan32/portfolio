@@ -13,8 +13,8 @@ const About = () => {
     <Grid container rowSpacing={0.5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
       <Grid className="center-content" item xs={12}>
         <div>
-          <h1>Babar Khan</h1>
-          <div className="">Web-Developer</div>
+          <h1 className="mono-font">Babar Khan</h1>
+          <div className="title">Web-Developer</div>
         </div>
       </Grid>
       <Grid className="divider" item xs={12} />
@@ -44,11 +44,7 @@ const About = () => {
       </Grid>
       <Grid xs={12} className="divider" />
 
-      <Grid
-        className="center-content wrapper"
-        item
-        xs={winSize < 900 ? 12 : 4}
-      >
+      <Grid className="center-content wrapper" item xs={winSize < 900 ? 12 : 4}>
         <TestimonialCard
           name={"Hammad Imran"}
           image={hammad_pic}

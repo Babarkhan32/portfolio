@@ -4,8 +4,7 @@ import Image from "../../components/image/image";
 import Grid from "@mui/material/Grid";
 import display from "./assets/babarDisplay.jpg";
 import useWindowSize from "../../hooks/windowResize";
-
-import "./style.css";
+import "./home.css";
 
 export const Home = () => {
   const [isInfoClicked, setClicked] = React.useState(true);
@@ -64,7 +63,9 @@ export const Home = () => {
         ) : (
           ""
         )}
-        <p ref={pRef}> </p>
+        <p className="about-intro" ref={pRef}>
+          {" "}
+        </p>
       </Grid>
       <Grid item className="divider" xs={12} />
     </Grid>

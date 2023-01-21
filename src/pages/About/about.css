@@ -1,24 +1,28 @@
 .title {
     font-size: 22px;
     font-weight: 700;
+    font-family: Anonymous Pro, monospace;
 }
 .divider {
     margin:7% !important;
     border-bottom: 2px solid;
     border-color:rgb(172, 170, 170)
 }
-
 .about-intro{
     margin-left:8%;
     margin-right:8%;
+    word-wrap: break-word;
+    font-weight: 400;
     font-family: Mulish;
     font-size: 18px;
     line-height: 30px;
     letter-spacing: .5px;
     word-wrap: break-word;
     font-weight: 400;
+    background-color: #f8f8f8;
     color: #767676;
     box-sizing: border-box;
+
 }
 .change-bg-to-white{
     background-color: white !important;
@@ -26,9 +30,21 @@
 
 
 .wrapper * {
-    color: #767676 !important;
-    
+    word-wrap: break-word;
+    font-weight: 400;
+    font-family: Mulish;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: .5px;
+    word-wrap: break-word;
+    font-weight: 400;
+    color: #767676;
+    box-sizing: border-box;
 }
+.mono-font{
+    font-family: Anonymous Pro, monospace;
+  }
+
 .sub-heading{
     margin-left:12% ;
     color: #767676 !important;
