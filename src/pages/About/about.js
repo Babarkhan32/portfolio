@@ -4,6 +4,7 @@ import useWindowSize from "../../hooks/windowResize";
 import hammad_pic from "./assets/hammad.jpg";
 import jawadPic from "./assets/jawad.jpg";
 import muneebPic from "./assets/muneeb.jpg";
+import constants from "../../constants";
 import "./about.css";
 
 const About = () => {
@@ -48,9 +49,7 @@ const About = () => {
         <TestimonialCard
           name={"Hammad Imran"}
           image={hammad_pic}
-          content={
-            "Under the internship of Sir Babar khan I have mastered few skills of JS which helped in my career a lot, Currently I am earning six figures and living a happy life, The credit goes to Sir Babar Khan"
-          }
+          content={constants.testimonials.hammad}
           project={"Testimonial card"}
         />
       </Grid>
@@ -62,7 +61,7 @@ const About = () => {
         <TestimonialCard
           name="Muneeb Afridi"
           image={muneebPic}
-          content="After three months of internship with Sir Babar khan I was able to tackle complex problems. Sir Babar khan not only helped me technically but also taught me how to act professionally"
+          content={constants.testimonials.muneed}
           project={"Testimonial card"}
         />
       </Grid>
@@ -74,9 +73,7 @@ const About = () => {
         <TestimonialCard
           name={"Jawad Khan"}
           image={jawadPic}
-          content={
-            "After my graduation I got lucky to have 3 months of internship with Sir Babar Khan, Free of cost and not a single penny was charged, I groomed technically and professionally very well. All thanks to Sir Babar khan"
-          }
+          content={constants.testimonials.jawad}
           project={"Testimonial card"}
         />
       </Grid>

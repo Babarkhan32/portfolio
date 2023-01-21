@@ -4,6 +4,7 @@ import Image from "../../components/image/image";
 import Grid from "@mui/material/Grid";
 import display from "./assets/babarDisplay.jpg";
 import useWindowSize from "../../hooks/windowResize";
+import constants from "../../constants";
 import "./home.css";
 
 export const Home = () => {
@@ -17,12 +18,7 @@ export const Home = () => {
 
   const size = useWindowSize();
   var i = 0;
-  var txt = ` I’m a Senior Full Stack Engineer with 5 years of professional software
-  development experience using JavaScript & TypeScript (React, Next.js
-  and Node.js). Currently, I’m part of an agile development team where
-  I’m in charge of developing highly scalable and reliable applications
-  using React.js, Next.js, Node.js, Vue.js & AWS in multiple
-  environments including microservices & monolithic.`; /* The text */
+  var txt = constants.Introduction; /* The text */
   var speed = 20; /* The speed/duration of the effect in milliseconds */
 
   function typeWriter() {

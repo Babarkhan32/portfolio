@@ -37,7 +37,7 @@ function ResponsiveDrawer(props) {
           { text: "About", icon: <InfoIcon /> },
           { text: "Services", icon: <MiscellaneousServicesIcon /> },
           { text: "Contact", icon: <ContactPhoneIcon /> },
-        ].map((menu, index) => (
+        ].map((menu) => (
           <Link
             to={`/${menu.text}`}
             style={{ color: "black", textDecoration: "none" }}

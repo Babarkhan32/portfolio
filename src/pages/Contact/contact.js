@@ -1,10 +1,8 @@
 import { Grid } from "@mui/material";
 import Card from "../../components/card/card";
 import useWindowSize from "../../hooks/windowResize";
-import github from "./assets/github.jpg";
-import whatsapp from "./assets/whatsapp.jpg";
-import linkedIn from "./assets/linkedIn.jpg";
 import "./contact.css";
+import constants from "../../constants";
 const Contact = () => {
   const size = useWindowSize();
   const winSize = size.width;
@@ -16,27 +14,7 @@ const Contact = () => {
         </div>
       </Grid>
       <Grid xs={1.5} />
-      {[
-        {
-          title: "Whatsapp",
-          username: "+923339402825",
-          message: "send me a message...",
-          image: whatsapp,
-          src: "https://api.whatsapp.com/send?phone=923339402825"
-        },
-        {
-          username: "babar-khan-b809a5193",
-          message: "Add me to your connections..",
-          image: linkedIn,
-          src: "https://www.linkedin.com/in/babar-khan-b809a5193/",
-        },
-        {
-          username: "babarkhan32",
-          message: "Follow me up...",
-          image: github,
-          src: "https://github.com/Babarkhan32",
-        },
-      ].map((contact) => {
+      {constants.contact.map((contact) => {
         return (
           <>
             <Grid item xs={winSize > 1200 ? 3 : 12}>

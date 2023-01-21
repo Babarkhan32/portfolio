@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState } from "react";
 import useWindowSize from "../../hooks/windowResize";
 import "./card.css";
 const Card = ({
@@ -11,20 +11,28 @@ const Card = ({
   message,
   src,
 }) => {
-  const readMoreref = useRef();
+  const [readMore, setReadMore] = useState("");
   const { width: winSize } = useWindowSize();
   const isBigScreen = winSize > 1650;
 
   console.log(isBigScreen, winSize);
   if (!socialCard) {
     return (
-      <div style={{ marginTop: "20px" }}>
+      <div
+        onMouseEnter={() => {
+          setReadMore("Read More");
+        }}
+        onMouseLeave={() => {
+          setReadMore("");
+        }}
+        style={{ marginTop: "20px" }}
+      >
         <div className="inner_elements">
           <span className="number">{number}</span>
           <h3 className="card_title">{title}</h3>
           <p className="card_description">{description}</p>
+          <div className={readMore ? "header" : ""}>{readMore}</div>
         </div>
-        <div ref={readMoreref}></div>
       </div>
     );
   } else {
@@ -44,12 +52,7 @@ const Card = ({
           </div>
           <div class="flip-card-back">
             <h1>Babar Khan</h1>
-            <a
-             
-              href={src}
-            >
-              {username}
-            </a>
+            <a href={src}>{username}</a>
             <p>{message}</p>
           </div>
         </div>
