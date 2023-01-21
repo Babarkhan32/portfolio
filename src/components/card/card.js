@@ -15,7 +15,6 @@ const Card = ({
   const { width: winSize } = useWindowSize();
   const isBigScreen = winSize > 1650;
 
-  console.log(isBigScreen, winSize);
   if (!socialCard) {
     return (
       <div
