@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import Card from "../../components/card/card";
 import useWindowSize from "../../hooks/windowResize";
+
 import "./contact.css";
 import constants from "../../constants";
 const Contact = () => {
@@ -13,11 +14,14 @@ const Contact = () => {
           <h2 className="title-span">Please get in touch... </h2>
         </div>
       </Grid>
-      <Grid xs={1.5} />
       {constants.contact.map((contact) => {
         return (
           <>
-            <Grid item xs={winSize > 1200 ? 3 : 12}>
+            <Grid
+              style={{ marginLeft: "5%", marginTop: "5%" }}
+              item
+              xs={winSize > 1200 ? 3 : 12}
+            >
               <Card
                 username={contact.username}
                 message={contact.message}
@@ -29,7 +33,6 @@ const Contact = () => {
           </>
         );
       })}{" "}
-      <Grid xs={1.5}> </Grid>
       <Grid className="divider" xs={12}></Grid>
       <p className="about-intro">
         I will love to get in contact with you guys. Up above is my contact
