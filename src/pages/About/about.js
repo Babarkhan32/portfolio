@@ -8,6 +8,7 @@ import constants from "../../constants";
 import "./about.css";
 
 const About = () => {
+  // To handle the resizing of window, if the window size change this function will notify the UI to make changes accordingly
   const size = useWindowSize();
   const winSize = size.width;
   return (
@@ -46,6 +47,7 @@ const About = () => {
       <Grid xs={12} className="divider" />
 
       <Grid className="center-content wrapper" item xs={winSize < 900 ? 12 : 4}>
+        {/* Added third party card to show that I can work with 3rd party libraries, The component CARD can be used for this */}
         <TestimonialCard
           name={"Hammad Imran"}
           image={hammad_pic}

@@ -54,6 +54,7 @@ function ResponsiveDrawer(props) {
     </div>
   );
 
+  // this is to provide window body information to the drawer of material ui
   const container =
     window !== undefined ? () => window().document.body : undefined;
 

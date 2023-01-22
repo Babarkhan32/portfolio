@@ -5,6 +5,7 @@ import useWindowSize from "../../hooks/windowResize";
 import "./contact.css";
 import constants from "../../constants";
 const Contact = () => {
+  // To handle the resizing of window, if the window size change this function will notify the UI to make changes accordingly
   const size = useWindowSize();
   const winSize = size.width;
   return (
@@ -17,6 +18,7 @@ const Contact = () => {
       {constants.contact.map((contact) => {
         return (
           <>
+            {/* This is to demonstrate that I can work with inLine css in react, this can go as a class in css file */}
             <Grid
               style={{ marginLeft: "5%", marginTop: "5%" }}
               item

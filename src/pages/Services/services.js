@@ -5,6 +5,7 @@ import constants from "../../constants";
 import "./services.css";
 import "../About/about.css";
 const Services = () => {
+   // To handle the resizing of window, if the window size change this function will notify the UI to make changes accordingly
   const size = useWindowSize();
   const winSize = size?.width;
 

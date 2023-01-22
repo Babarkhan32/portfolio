@@ -11,6 +11,7 @@ export const Home = () => {
   const [isInfoClicked, setClicked] = React.useState(true);
   const pRef = useRef();
   React.useEffect(() => {
+    //To render click me button after 4 seconds
     setTimeout(() => {
       setClicked(false);
     }, 4000);
@@ -49,7 +50,7 @@ export const Home = () => {
       <Grid item xs={size?.width < 800 ? 12 : 6}>
         <div className="animate-text">Babar Khan</div>
         <h2>Full Stack developer..</h2>
-
+        {/* To disappear click me button after it is clicked */}
         {!isInfoClicked ? (
           <h1 class="kreep">
             <button onClick={typeWriter} class="button button5">
@@ -59,6 +60,7 @@ export const Home = () => {
         ) : (
           ""
         )}
+        {/* created ref in order to append the text when the button click me is clicked */}
         <p className="about-intro" ref={pRef}>
           {" "}
         </p>
