@@ -6,4 +6,4 @@ Please note that I have implemented few animationsi n css, few in javascript in 
 
 
 run npm i -f 
-enjoy :)
+
